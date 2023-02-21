@@ -1,0 +1,22 @@
+body {
+    font-family: "wf_segoe-ui", "Segoe UI", "Lucida Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-link.active button.btn {
+    color: #2270ee;
+    border: solid 1px #2270ee;
+    background-color: transparent;
+}
+
+.nav-link button.btn {
+    color: #000;
+    background-color: transparent;
+}
+
+.fontSize12 {
+    font-size: 12px;
+}
+
+.fontSize26 {
+    font-size: 26px;
+}

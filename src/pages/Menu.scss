@@ -1,0 +1,17 @@
+#navbarMenu {
+    background-color: #1B1C1D;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #80d8ff;
+    }
+}
