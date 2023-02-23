@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Perlead from '@/components/Block/Perlead'
-import MonthCall from '@/components/Block/Perlead/month'
-import WeekCall from '@/components/Block/Perlead/week'
+import CallMet from '@/components/Block/Callmet'
+import MonthCall from '@/components/Block/Callmet/month'
+import WeekCall from '@/components/Block/Callmet/week'
 import { Row, Col, Button, Nav, NavItem, NavLink, Card, TabContent, TabPane } from 'reactstrap'
 import Styles from '@/styles/Month.module.scss'
 
-const PerleadContainer = () => {
+const CallMetContainer = () => {
   const [active, setActive] = useState('1')
 
   const toggleTab = (tab: string) => {
@@ -19,9 +19,9 @@ const PerleadContainer = () => {
       <Row className="mt-5">
         <Col md={6}>
           <div className="">
-            <h6 className="m-0">Campaign Name | Cost Per lead | Revenue</h6>
+            <h6 className="m-0">Campaign name | Calls</h6>
           </div>
-          <Perlead />
+          <CallMet />
         </Col>
         <Col md={6}>
           <div className="d-flex justify-content-end my-2">
@@ -66,4 +66,4 @@ const PerleadContainer = () => {
   )
 }
 
-export default PerleadContainer
+export default CallMetContainer

@@ -1,63 +1,36 @@
-import { Bar, Line } from 'react-chartjs-2'
-import { Chart, CategoryScale, registerables } from 'chart.js'
-Chart.register(CategoryScale)
-Chart.register(...registerables)
+import React, { Component } from 'react'
+
+// ** Reactstrap Imports
+import { Card, CardHeader, CardTitle, CardBody, Col } from 'reactstrap'
+import { Chart } from 'react-google-charts'
 
 const PerleadComponent = () => {
-  const gridLineColor = '#D9D9D9'
-  const labelColor = '#000000'
-  const success = '#72A9F8'
-  // ** Chart Options
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    animation: { duration: 500 },
-    scales: {
-      x: {
-        grid: {
-          color: gridLineColor,
-          borderColor: gridLineColor,
-        },
-        ticks: { color: labelColor },
-      },
-      y: {
-        min: 0,
-        max: 1000000,
-        grid: {
-          color: gridLineColor,
-          borderColor: gridLineColor,
-        },
-        ticks: {
-          stepSize: 500000,
-          color: labelColor,
-        },
-      },
-    },
-    plugins: {
-      legend: { display: false },
-    },
-  }
 
-  // ** Chart data
-  const data = {
-    labels: [
-      'Cost',
-      'Revenue',
-    ],
-    datasets: [
-      {
-        maxBarThickness: 50,
-        backgroundColor: success,
-        borderColor: 'transparent',
-        borderRadius: { topRight: 0, topLeft: 0 },
-        data: [550000, 600000],
-      },
-    ],
-  }
+  const data = [
+    ["Task", "Hours per Day"],
+    ["Cost", 55],
+    ["Revenue", 45], // CSS-style declaration
+  ];
+  
+  const options = {
+    title: "",
+    pieHole: 1,
+    is3D: true,
+  };
 
   return (
     <>
-        <Bar data={data} options={options} height={270} />
+        <Card className='chartBackground mt-4'>
+          <CardBody>
+            <Chart
+              chartType="PieChart"
+              width="100%"
+              height="400px"
+              data={data}
+              options={options}
+            />
+          </CardBody>
+        </Card>
     </>
   )
 }

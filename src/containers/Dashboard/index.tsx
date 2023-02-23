@@ -15,8 +15,10 @@ import Revenue from '@/components/Block/Revenue'
 import Month from '@/components/Block/Month'
 import Week from '@/components/Block/Week'
 import Metrics from '@/components/Block/Metrics'
-import Customers from '@/components/Block/Customers'
+import CallMet from './CallMet'
 import Perlead from './Perlead'
+import IncomeCall from './IncomeCall'
+import Customers from './Customer'
 
 const DashboardContainer = () => {
   const [active, setActive] = useState('1')
@@ -84,7 +86,9 @@ const DashboardContainer = () => {
           </Col>
         </Row>
         <Metrics />
+        <CallMet />
         <Perlead />
+        <IncomeCall />
         <Customers />
       </Container>
     </>
